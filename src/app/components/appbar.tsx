@@ -28,6 +28,7 @@ export const AppBar = ()=>{
                             },
                         }}
                         // type="search"
+                        color="secondary"
                         id="standard-basic"
                         className="inputRounded"
                         InputProps={{

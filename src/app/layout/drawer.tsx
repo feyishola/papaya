@@ -27,6 +27,13 @@ import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
 import HistoryToggleOffOutlinedIcon from '@mui/icons-material/HistoryToggleOffOutlined';
 import VideoLibraryOutlinedIcon from '@mui/icons-material/VideoLibraryOutlined';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Image from 'next/image';
+import designcode from "../assets/designcode.png";
+import figma from "../assets/figma.png";
+import sketch from "../assets/sketch.png";
+import Logo1 from "../assets/Logo1.png";
+
 import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
@@ -118,32 +125,9 @@ export default function MiniDrawer({children}:any) {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       
-      {/* <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
-      <Drawer variant="permanent" open={open} sx={{bgcolor:"#2E335A"}}>
+      <Drawer variant="permanent" open={open} sx={{bgcolor:"#2E335A",borderColor:"#2E335A",borderWidth:'0px'}} >
       <Box sx={{background:'linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)', height:"100vh", color:"white"}}>
-        {/* <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
-        </DrawerHeader> */}
+        
         <Box sx={{display:"flex",my:"22px",gap:"8px", justifyContent:"center"}}>
           <Box sx={{width:'12px',height:"12px", borderRadius:"50%", bgcolor:"#ED695E"}}/>
           <Box sx={{width:'12px',height:"12px", borderRadius:"50%", bgcolor:"#F4BF4F"}}/>
@@ -265,7 +249,7 @@ export default function MiniDrawer({children}:any) {
                     color:"white"
                   }}
                 >
-                  {text.icon}
+                  <Image src={text.icon} alt={"image"} width={30} height={30} style={{borderRadius:"50%"}}/>
                 </ListItemIcon>
                 <ListItemText primary={text.name} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -334,7 +318,7 @@ const secondroutes = [
   {
     name:"Show More",
     to:"/papayamusic",
-    icon:<HomeOutlinedIcon/>
+    icon:<ExpandMoreIcon/>
   }
   
 ]
@@ -343,21 +327,21 @@ const thirdroutes = [
   {
     name:"DesignCode",
     to:"/papayamusic",
-    icon:<HomeOutlinedIcon/>
+    icon:designcode
   },
   {
     name:"Figma",
     to:"/papayamusic",
-    icon:<HomeOutlinedIcon/>
+    icon:figma
   },
   {
     name:"Sketch",
     to:"/papayamusic",
-    icon:<HomeOutlinedIcon/>
+    icon:sketch
   },
   {
     name:"Spine",
     to:"/papayamusic",
-    icon:<HomeOutlinedIcon/>
+    icon:Logo1
   }
 ]

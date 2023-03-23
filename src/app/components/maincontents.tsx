@@ -73,6 +73,12 @@ export const MainContent = ()=>{
                                                 <Typography color={"white"}>
                                                     {per.description}
                                                 </Typography>
+                                                <Typography color={"gray"} variant={"body2"}>
+                                                    {per.name}
+                                                </Typography>
+                                                <Typography color={"gray"} variant={"body2"}>
+                                                    {per.views}
+                                                </Typography>
                                             </Box>
 
                                     </Box>
@@ -97,37 +103,47 @@ const content = [
     {
         art:Rectangle393,
         logo:Logo,
-        description:"Design and Prototype an App with Play - Full 3-hour Course"
-
+        description:"Design and Prototype an App with Play - Full 3-hour Course",
+        name:"Designcode",
+        views:"14k views - 1 month ago "
     },
     {
         art:Rectangle394,
         logo:Logo1,
-        description:"Design and Prototype an App with Play - Full 3-hour Course"
-
+        description:"Design and Prototype an App with Play - Full 3-hour Course",
+        name:"Designcode",
+        views:"14k views - 1 month ago "
     },
     {
         art:Rectangle395,
         logo:Logo2,
-        description:"Design and Prototype an App with Play - Full 3-hour Course"
+        description:"Design and Prototype an App with Play - Full 3-hour Course",
+        name:"Designcode",
+        views:"14k views - 1 month ago "
 
     },
     {
         art:Rectangle400,
         logo:Logo3,
-        description:"Design and Prototype an App with Play - Full 3-hour Course"
+        description:"Design and Prototype an App with Play - Full 3-hour Course",
+        name:"Designcode",
+        views:"14k views - 1 month ago "
 
     },
     {
         art:Rectangle404,
         logo:Logo2,
-        description:"Design and Prototype an App with Play - Full 3-hour Course"
+        description:"Design and Prototype an App with Play - Full 3-hour Course",
+        name:"Designcode",
+        views:"14k views - 1 month ago "
 
     },
     {
         art:Video,
         logo:Logo,
-        description:"Design and Prototype an App with Play - Full 3-hour Course"
+        description:"Design and Prototype an App with Play - Full 3-hour Course",
+        name:"Designcode",
+        views:"14k views - 1 month ago "
 
     }
 ]
