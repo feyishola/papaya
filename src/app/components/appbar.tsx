@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import { Box,TextField,Avatar, IconButton, InputAdornment } from "@mui/material"
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';

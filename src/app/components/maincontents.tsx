@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import { Box, Stack, Skeleton, Grid, Typography } from "@mui/material"
 import { useState,useEffect } from "react"

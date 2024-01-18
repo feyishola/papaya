@@ -2,9 +2,9 @@
 
 import { Typography,Box } from "@mui/material"
 import { bgcolor } from "@mui/system"
-import { AppBar } from "../components/appbar"
-import { MainContent } from "../components/maincontents"
-import { SegmentControl } from "../components/segmentedcontrol"
+import { AppBar } from "./appbar"
+import { MainContent } from "./maincontents"
+import { SegmentControl } from "./segmentedcontrol"
 
 export const HomePage = ()=>{
     return(

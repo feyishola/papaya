@@ -34,7 +34,8 @@ import figma from "../assets/figma.png";
 import sketch from "../assets/sketch.png";
 import Logo1 from "../assets/Logo1.png";
 
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation'
 
 const drawerWidth = 240;
 
@@ -111,7 +112,8 @@ export default function MiniDrawer({children}:any) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const Navigate = useNavigate()
+  // const Navigate = useNavigate()
+  const router = useRouter()
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -153,7 +155,7 @@ export default function MiniDrawer({children}:any) {
                 },
           }}>
           {Firstroutes.map((text, index) => (
-            <ListItem key={text.name} disablePadding sx={{ display: 'block', "ListItem:hover":"#C427FB" }} onClick={()=>{Navigate(text.to)}}>
+            <ListItem key={text.name} disablePadding sx={{ display: 'block', "ListItem:hover":"#C427FB" }} onClick={()=>{router.push(text.to)}}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -193,7 +195,7 @@ export default function MiniDrawer({children}:any) {
   }}
         >
           {secondroutes.map((text, index) => (
-            <ListItem key={text.name} disablePadding sx={{ display: 'block' }} onClick={()=>{Navigate(text.to)}}>
+            <ListItem key={text.name} disablePadding sx={{ display: 'block' }} onClick={()=>{router.push(text.to)}}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -233,7 +235,7 @@ export default function MiniDrawer({children}:any) {
   }}
         >
           {thirdroutes.map((text, index) => (
-            <ListItem key={text.name} disablePadding sx={{ display: 'block' }} onClick={()=>{Navigate(text.to)}}>
+            <ListItem key={text.name} disablePadding sx={{ display: 'block' }} onClick={()=>{router.push(text.to)}}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
