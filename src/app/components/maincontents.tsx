@@ -22,7 +22,7 @@ export const MainContent = ()=>{
     useEffect(()=>{
         setTimeout(()=>{
             setLoading(false)
-        },3000)
+        },300)
     },[])
 
     return(
