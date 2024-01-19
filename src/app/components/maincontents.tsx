@@ -29,7 +29,7 @@ export const MainContent = ()=>{
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"} mt={0}>
             <Grid container spacing={1} justifyContent="center">
                 {content.map((per, idx) => (
-                    <Grid item xs={12} sm={12} md={6} lg={3} key={idx}>
+                    <Grid item xs={12} sm={12} md={6} lg={4} key={idx} >
                         {loading ? (
                             <Skeleton variant="rectangular"  height={336} animation="wave" />
                         ) : (
