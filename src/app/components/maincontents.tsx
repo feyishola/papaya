@@ -25,79 +25,71 @@ export const MainContent = ()=>{
         },300)
     },[])
 
-    return(
-    <Stack display={"flex"} justifyContent={"center"} alignItems={"center"} mt={0}>
-        <Grid container gap={1} sx={{display:"flex", justifyContent:"center", alignItems:"center", mt:"0"}}>
-                {
-                    content.map((per,idx)=>{
-
-                        return(
-                            <Grid item xs={3.8} key={idx}>
-                {
-                                loading?<Skeleton variant="rectangular" width={345} height={336} animation={"wave"}/>:
+    return (
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} mt={0}>
+            <Grid container spacing={1} justifyContent="center">
+                {content.map((per, idx) => (
+                    <Grid item xs={12} sm={12} md={6} lg={3} key={idx}>
+                        {loading ? (
+                            <Skeleton variant="rectangular"  height={336} animation="wave" />
+                        ) : (
                             <Box
-                                        sx={{height:"336px", background:'linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%)', width:"345px",display:"flex",alignItems:"center", flexDirection:"column"}}
-                            
-                                        >
-                                        {
-                                            loading?<Skeleton variant="rectangular" width={345} height={205} animation={"wave"}/>:
-                                                <Box
-                                                    sx={{height:"205px", width:"345px"}}
-                                                >
-                                                    <Image src={per.art} alt="" className="object-cover" width={345} height={205}/>
-                                                </Box>
-                                        } 
-                                
-                                {
-                                    loading?<Skeleton variant="rectangular" width={345} height={120} animation={"wave"}/>:
+                                sx={{
+                                    height: "336px",
+                                    background: 'linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%)',
+                                    // width: "100%",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    flexDirection: "column"
+                                }}
+                            >
+                                <Box sx={{ height: "205px" }}>
+                                    <Image src={per.art} alt=""    height={205} style={{maxWidth:'100%'}}/>
+                                </Box>
+                                <Box
+                                    sx={{
+                                        height: "120px",
+                                        // width: "100%",
+                                        display: "flex",
+                                        // justifyContent: "space-between",
+                                        alignItems: "center",
+                                        mt: "2px",
+                                        flexDirection: "row",
+                                        background: 'linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%)'
+                                    }}
+                                >
                                     <Box
-                                            sx={{height:"120px", width:"355px", display:"flex", justifyContent:"space-between",alignItems:"center", mt:"2px", flexDirection:"row",background:'linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%)'}}
-                                        >
-                                            <Box
-                                                sx={{
-                                                    width:"30px",
-                                                    height:"30px",
-                                                    borderRadius:"50%",
-                                                    background: 'linear-gradient(180deg, rgba(72, 49, 157, 0.2) 18.75%, rgba(72, 49, 157, 0) 100%)',
-                                                    display:"flex",
-                                                    justifyContent:"center",
-                                                    alignItems:"center",
-                                                    ml:"10px"
-                                                }}
-                                                >
-                                                    <Image src={per.logo} alt="" className="object-cover"/>
-                                            </Box>
-                                            <Box
-                                                maxWidth={'280px'}
-                                            >
-                                                <Typography color={"white"}>
-                                                    {per.description}
-                                                </Typography>
-                                                <Typography color={"gray"} variant={"body2"}>
-                                                    {per.name}
-                                                </Typography>
-                                                <Typography color={"gray"} variant={"body2"}>
-                                                    {per.views}
-                                                </Typography>
-                                            </Box>
-
+                                        sx={{
+                                            width: "30px",
+                                            height: "30px",
+                                            borderRadius: "50%",
+                                            background: 'linear-gradient(180deg, rgba(72, 49, 157, 0.2) 18.75%, rgba(72, 49, 157, 0) 100%)',
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            ml: "10px"
+                                        }}
+                                    >
+                                        <Image src={per.logo} alt=""  />
                                     </Box>
-                                }
-                                
-
+                                    <Box maxWidth={'330px'}>
+                                        <Typography color={"white"}>{per.description}</Typography>
+                                        <Typography color={"gray"} variant={"body2"}>
+                                            {per.name}
+                                        </Typography>
+                                        <Typography color={"gray"} variant={"body2"}>
+                                            {per.views}
+                                        </Typography>
+                                    </Box>
+                                </Box>
                             </Box>
-                }
-                </Grid>
-                
-                
-                        )
-                    })
-                }
-        </Grid>
-            
-    </Stack>
-    )
-}
+                        )}
+                    </Grid>
+                ))}
+            </Grid>
+        </Box>
+    );
+};
 
 const content = [
     {
