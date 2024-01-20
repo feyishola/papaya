@@ -17,19 +17,18 @@ export const AppBar = () => {
             <Box
                 sx={{
                     height: "56px",
-                    // background: 'linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)',
+                    background: 'linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)',
                     display: "flex",
                     overflow: "hidden",
                     justifyContent: "space-between",
                     padding: isMobile ? '0 10px' : '0 20px', // Adjust padding for tablet and desktop
-                    backgroundColor:"red"
                 }}
             >
                 {!isMobile && (
-                    <Box my={"8px"} marginLeft={isTablet ? '100px' : '290px'} sx={{backgroundColor:"gold"}}>
+                    <Box my={"8px"} marginLeft={isTablet ? '100px' : '290px'}>
                         <TextField
                             sx={{
-                                maxWidth:'445px', // Adjust width for tablet
+                                width: isTablet ? '300px' : '445px', // Adjust width for tablet
                                 "& .MuiInputBase-root": {
                                     height: 35
                                 },
@@ -64,7 +63,7 @@ export const AppBar = () => {
                         />
                     </Box>
                 )}
-                <Box display={"flex"} justifyContent={"space-around"} alignItems={"center"} maxWidth={"300px"} marginRight={"5px"} sx={{backgroundColor:"white"}}>
+                <Box display={"flex"} justifyContent={"space-around"} alignItems={"center"} maxWidth={"300px"} marginRight={"5px"} >
                     <IconButton sx={{ color: "white" }}>
                         <VideocamOutlinedIcon />
                     </IconButton>
