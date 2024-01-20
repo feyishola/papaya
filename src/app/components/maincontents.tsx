@@ -26,18 +26,18 @@ export const MainContent = ()=>{
     },[])
 
     return (
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} mt={0}>
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} mt={0} p={1}>
             <Grid container spacing={1} justifyContent="center">
                 {content.map((per, idx) => (
                     <Grid item xs={12} sm={12} md={6} lg={4} key={idx} >
                         {loading ? (
-                            <Skeleton variant="rectangular"  animation="wave" style={{maxHeight:"336"}} />
+                            <Skeleton variant="rectangular" height={300} animation="wave"  />
                         ) : (
                             <Box
                                 sx={{
                                     maxHeight:"336px",
                                     background: 'linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%)',
-                                    // width: "100%",
+                                    maxWidth: "700px",
                                     display: "flex",
                                     alignItems: "center",
                                     flexDirection: "column"
@@ -67,7 +67,7 @@ export const MainContent = ()=>{
                                             display: "flex",
                                             justifyContent: "center",
                                             alignItems: "center",
-                                            ml: "10px"
+                                            ml: "5px"
                                         }}
                                     >
                                         <Image src={per.logo} alt=""  />

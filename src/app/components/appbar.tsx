@@ -10,24 +10,26 @@ export const AppBar = () => {
     let activeColor = '#A73EE7';
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isTablet = useMediaQuery(theme.breakpoints.between('sm', 'md'));
 
     return (
         <Box>
-            <Box
+            {/* <Box
                 sx={{
                     height: "56px",
-                    background: 'linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)',
+                    // background: 'linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)',
                     display: "flex",
                     overflow: "hidden",
                     justifyContent: "space-between",
-                    padding: isMobile ? '0 10px' : '0'
+                    padding: isMobile ? '0 10px' : '0 20px', // Adjust padding for tablet and desktop
+                    backgroundColor:"red"
                 }}
             >
                 {!isMobile && (
-                    <Box my={"8px"} marginLeft={'290px'}>
+                    <Box my={"8px"} marginLeft={isTablet ? '100px' : '290px'} sx={{backgroundColor:"gold"}}>
                         <TextField
                             sx={{
-                                width: '445px',
+                                maxWidth:'445px', // Adjust width for tablet
                                 "& .MuiInputBase-root": {
                                     height: 35
                                 },
@@ -41,8 +43,8 @@ export const AppBar = () => {
                                         <IconButton>
                                             <Box
                                                 sx={{
-                                                    width: "32px",
-                                                    height: "32px",
+                                                    maxWidth: "32px",
+                                                    maxHeight: "32px",
                                                     borderRadius: "70px",
                                                     border: `1px solid ${activeColor}`
                                                 }}
@@ -62,8 +64,7 @@ export const AppBar = () => {
                         />
                     </Box>
                 )}
-                <Box display={"flex"} justifyContent={"space-around"} alignItems={"center"} width={isMobile ? '100%' : "300px"} marginRight={"5px"}>
-
+                <Box display={"flex"} justifyContent={"space-around"} alignItems={"center"} maxWidth={"300px"} marginRight={"5px"} sx={{backgroundColor:"white"}}>
                     <IconButton sx={{ color: "white" }}>
                         <VideocamOutlinedIcon />
                     </IconButton>
@@ -71,9 +72,8 @@ export const AppBar = () => {
                         <NotificationsNoneOutlinedIcon />
                     </IconButton>
                     <Avatar sx={{ backgroundColor: '#22D7FF' }}>{'A'}</Avatar>
-
                 </Box>
-            </Box>
+            </Box> */}
         </Box>
     )
 }
