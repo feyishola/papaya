@@ -31,11 +31,11 @@ export const MainContent = ()=>{
                 {content.map((per, idx) => (
                     <Grid item xs={12} sm={12} md={6} lg={4} key={idx} >
                         {loading ? (
-                            <Skeleton variant="rectangular"  height={336} animation="wave" />
+                            <Skeleton variant="rectangular"  animation="wave" style={{maxHeight:"336"}} />
                         ) : (
                             <Box
                                 sx={{
-                                    height: "336px",
+                                    maxHeight:"336px",
                                     background: 'linear-gradient(180deg, #2B2F53 3.16%, #1D1C34 36.05%)',
                                     // width: "100%",
                                     display: "flex",
@@ -43,12 +43,12 @@ export const MainContent = ()=>{
                                     flexDirection: "column"
                                 }}
                             >
-                                <Box sx={{ height: "205px" }}>
+                                <Box sx={{ maxHeight: "205px" }}>
                                     <Image src={per.art} alt=""    height={205} style={{maxWidth:'100%'}}/>
                                 </Box>
                                 <Box
                                     sx={{
-                                        height: "120px",
+                                        maxHeight: "120px",
                                         // width: "100%",
                                         display: "flex",
                                         // justifyContent: "space-between",
