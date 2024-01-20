@@ -7,7 +7,7 @@ export const SegmentControl = () => {
 
     return (
         <Box sx={{ p: 1 }}>
-            {/* <Box
+            <Box
                 sx={{
                     height: "56px",
                     background: 'linear-gradient(180deg, rgba(196, 39, 251, 0) 0%, rgba(196, 39, 251, 0.2) 100%)',
@@ -33,7 +33,7 @@ export const SegmentControl = () => {
                         {ctr}
                     </Typography>
                 ))}
-            </Box> */}
+            </Box>
         </Box>
     );
 };

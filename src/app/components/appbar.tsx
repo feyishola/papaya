@@ -14,7 +14,7 @@ export const AppBar = () => {
 
     return (
         <Box>
-            {/* <Box
+            <Box
                 sx={{
                     height: "56px",
                     // background: 'linear-gradient(168.44deg, #2E335A 1.62%, #1C1B33 95.72%)',
@@ -73,7 +73,7 @@ export const AppBar = () => {
                     </IconButton>
                     <Avatar sx={{ backgroundColor: '#22D7FF' }}>{'A'}</Avatar>
                 </Box>
-            </Box> */}
+            </Box>
         </Box>
     )
 }
